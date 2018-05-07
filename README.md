@@ -24,14 +24,26 @@ Angular 4 is a full-fledged JavaScript framework for building web applications a
 
 ```console
 Check that if nodejs and npm is installed in your system by running node -v and  npm -v in a terminal/console window.
-
-This will help you to see the version installed in your system.If it does not print anything ,
-
-you need to install the package based on your os.
+This will help you to see the version installed in your system.If it does not print anything ,you need to install the package based on your os.
 ```
-
 **NOTE: Verify that you are running at least Node.js version 8.x or greater and npm version 5.x or greater**
 
-```console
+```bash
 npm install -g @angular/cli
 ```
+
+### Usage
+
+```bash
+ng help
+```
+
+### Generating and serving an Angular project via a development server
+
+```bash
+ng new PROJECT-NAME
+cd PROJECT-NAME
+ng serve --open
+```
+
+ The app will automatically reload if you change any of the source files.
