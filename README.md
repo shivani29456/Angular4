@@ -20,10 +20,18 @@ Angular 4 is a full-fledged JavaScript framework for building web applications a
 
 ### Installation
 
-1. Nodejs and Npm
+
 
 ```console
-Check that if nodejs and npm is installed in your system by running node -v and  npm -v in a terminal/console window.This will help you to see the version installed in your system.If it does not print anything ,you need to install 
+Check that if nodejs and npm is installed in your system by running node -v and  npm -v in a terminal/console window.
+
+This will help you to see the version installed in your system.If it does not print anything ,
+
+you need to install the package based on your os.
 ```
 
 **NOTE: Verify that you are running at least Node.js version 8.x or greater and npm version 5.x or greater**
+
+```console
+npm install -g @angular/cli
+```
