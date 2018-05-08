@@ -3,6 +3,14 @@
 ### Introduction
 Angular 4 is a full-fledged JavaScript framework for building web applications and apps in JavaScript, html, and TypeScript, which is a superset of JavaScript.The code is written in TypeScript, which compiles to JavaScript and displays the same in the browser.
 
+### Features
+* Easy to learn and implement
+* Backed by Google
+* Nice integration with CSS(Bootstrap & Foundation)
+* Two way data binding
+* Dependency injection(Separation of layers)
+* Post back free(Loading data without refreshing page)
+
 ### Prerequisites
 
 * HTML
