@@ -61,3 +61,9 @@ You can configure the default HTTP host and port used by the development server 
 ```bash
 ng serve --host 0.0.0.0 --port 4504
 ```
+### npm ERR!registry error parsing json- while trying to install npm in Windows
+```bash
+npm cache clean
+npm config set proxy 'username:password@your.proxy.com'
+npm config set https-proxy 'username:password@your.proxy.com'
+```
