@@ -67,4 +67,8 @@ npm cache clean
 npm config set proxy 'username:password@your.proxy.com'
 npm config set https-proxy 'username:password@your.proxy.com'
 ```
-### 
+#
+## Documentation
+
+Docs can be found [here](https://angular.io/).
+
