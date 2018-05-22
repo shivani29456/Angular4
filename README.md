@@ -23,7 +23,7 @@ Angular 4 is a full-fledged JavaScript framework for building web applications a
 * NODEJS
 * NPM
 * ANGULAR CLI
-* IDE (for writing code)
+* IDE (for writing code and to code quickly install `typescript` package.)
 
 
 ### Installation
@@ -67,3 +67,4 @@ npm cache clean
 npm config set proxy 'username:password@your.proxy.com'
 npm config set https-proxy 'username:password@your.proxy.com'
 ```
+### 
