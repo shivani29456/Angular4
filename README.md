@@ -68,6 +68,24 @@ npm config set proxy 'username:password@your.proxy.com'
 npm config set https-proxy 'username:password@your.proxy.com'
 ```
 
+### Why do we need installation of both global and local version of Angular CLI ??
+
+The global install is needed to start a new application. The ```ng new <app-name>``` command is run using the global installation of the CLI. In fact, if you try to run ng new while inside the folder structure of an existing CLI application, you get this lovely error:
+```console 
+You cannot use the new command inside an Angular CLI project.
+```
+Other commands that can be run from the global install are ```ng help```, ```ng get/set``` with the --global option, ```ng version```, ```ng doc```, and ```ng completion```.
+The local install of the CLI is used after an application has been built. This way, when new versions of the CLI are available, you can update your global install, and not affect the local install. This is good for the stability of a project. Most ng commands only make sense with the local version, like ```lint```, ```build``` and ```serve```, etc.
+### How to fix this warning:-
+```console
+Your global Angular CLI version (1.1.1) is greater than your local version (1.0.6). The local Angular CLI version is used.
+```
+```bash
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
+```
+
 
 ### PDF Creation using JSPDF
 
