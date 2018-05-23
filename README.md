@@ -89,7 +89,7 @@ npm install
 
 ### PDF Creation using JSPDF
 
-JSON Data
+JSON Data(Birds.json)
 ```bash
 [
 {
@@ -224,7 +224,7 @@ tr{
 **Optional**
 
 * Step 5:-
-- Set the tabel header and adjust its fontsize :- ``` doc.setFontSize(30);
+  - Set the tabel header and adjust its fontsize :- ``` doc.setFontSize(30);
     doc.text(460, 70, "Daily Contribution Report",'center'); ```
 
 ## Documentation
