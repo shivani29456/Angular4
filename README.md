@@ -204,7 +204,10 @@ tr{
 | 001   |Eurasian Collared-Dove     | Dove    |
 | 002     | Bald Eagle       | Hawk     |
 | 003     | Cooper's Hawk       | Hawk     |
+
+
 **Optional**
+
 * Step 5:-
 - Set the tabel header and adjust its fontsize :- ``` doc.setFontSize(30);
     doc.text(460, 70, "Daily Contribution Report",'center'); ```
