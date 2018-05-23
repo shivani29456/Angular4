@@ -72,3 +72,140 @@ npm config set https-proxy 'username:password@your.proxy.com'
 
 Docs can be found [here](https://angular.io/).
 
+### PDF Creation using JSPDF
+
+JSON Data
+```bash
+[
+{
+    "ID": "001",
+   "Name": "Eurasian Collared-Dove",
+    "Type": "Dove",
+    "Scientific Name": "Streptopelia"
+},
+{
+    "ID": "002",
+    "Name": "Bald Eagle",
+    "Type": "Hawk",
+    "Scientific Name": "Haliaeetus leucocephalus" 
+},
+{
+    "ID": "003",
+    "Name": "Cooper's Hawk",
+    "Type": "Hawk",
+    "Scientific Name": "Accipiter cooperii" 
+}
+]
+```
+* Step 1:
+   - **app.module.ts**:- ``` import { HttpClientModule } from '@angular/common/http'; ```
+* Step 2:
+   -**app.component.ts**:-
+```bash
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import * as jsPDF from 'jspdf';
+import { HttpClient } from '@angular/common/http';
+import { HttpErrorResponse } from '@angular/common/http';
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent {
+ // title = 'app';
+@ViewChild('content') content:ElementRef;
+ title = 'JSON to Table Example';
+  constructor (private httpService: HttpClient) { }
+  arrBirds: string [];
+
+  ngOnInit () {
+    this.httpService.get('./assets/Birds.json').subscribe(
+      data => {
+        this.arrBirds = data as string [];	 // FILL THE ARRAY WITH DATA.
+        //  console.log(this.arrBirds[1]);
+      },
+      (err: HttpErrorResponse) => {
+        console.log (err.message);
+      }
+    );
+  }
+
+public downloadPDf(){
+	let doc=new jsPDF();
+	let specialElementHandlers = {
+	'#editor' : function(element,renderer) {
+          return true;
+	}
+	};
+
+
+	let content=this.content.nativeElement;
+	doc.fromHTML(content.innerHTML,15,15 ,{
+	'width':190,
+	'elementHandlers':specialElementHandlers
+	});
+	doc.save('xxx.pdf');
+}
+}
+```
+* Step3:-
+   - **app.component.html**:-
+```bash
+<div id="content" #content style="text-align:left;width:auto;">
+
+    <h1>
+        {{ title }}!
+    </h1>
+
+    <table *ngIf="arrBirds  " width="100%" style="font-size:9px;" >
+        <!-- ADD HEADERS -->
+        <tr >
+            <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+
+        </tr>
+
+        <!-- BIND ARRAY TO TABLE -->
+        <tr *ngFor="let bird of arrBirds" hidden="true">
+            <td>{{bird.ID}}</td>
+                <td>{{bird.Name}}</td>
+                    <td>{{bird.Type}}</td>
+        </tr>
+    </table>
+</div>
+
+<button (click)="downloadPDf()">Export to Pdf</button>
+```
+* Step 4:-(for styling purpose)
+  - **app.component.css**:-
+```bash
+table, th, td 
+{
+    margin: 10px 0;
+    
+    padding: auto;
+    font: 15px Verdana;
+    visibility: hidden;
+
+}
+th {
+    font-weight:bold;
+    visibility: hidden;
+}
+tr{
+	visibility: hidden;
+}
+```
+**Output**:-
+
+| ID | Name | Type |
+| :---         |     :---      |          :--- |
+| 001   |Eurasian Collared-Dove     | Dove    |
+| 002     | Bald Eagle       | Hawk     |
+| 003     | Cooper's Hawk       | Hawk     |
+**Optional**
+* Step 5:-
+- Set the tabel header and adjust its fontsize :- ``` doc.setFontSize(30);
+    doc.text(460, 70, "Daily Contribution Report",'center'); ```
+
