@@ -230,4 +230,6 @@ tr{
 ## Documentation
 
 Docs can be found [here](https://angular.io/).
+## MultiChart
 
+![alt text](http://krispo.github.io/angular-nvd3/img/multiChart.png)
