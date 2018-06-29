@@ -27,7 +27,13 @@ Angular 4 is a full-fledged JavaScript framework for building web applications a
 
 ### Angular CLI (Command Line Interface)- Introduction
 
-Angular provides an utility to allow users to create and manage projects from the command line. It automates tasks like creating projects, adding new controllers, etc. It’s generally a good idea to use angular-cli as it will help create and maintain common patterns across our application and use scaffolding for easier development workflows.
+Angular provides an utility to allow users to create and manage projects from the command line. It automates tasks like creating projects, adding new controllers, etc. It’s generally a good idea to use angular-cli as it will help create and maintain common patterns across our application and use **scaffolding** for easier development workflows.
+
+### What is scaffolding?
+
+The CLI tool has commands for scaffolding. This makes it possible to add things like new components, routes or services from the command line. People who have worked with other frameworks such as Ruby on Rails will be familiar with this.
+To use scaffolding the ng generate or ng g command is used. Some of the things that can be added with scaffolding are components, routes, services, classes and pipes.
+Apart from speeding up development, scaffolding will also enforce a strict project structure. This helps when collaborating with other developers and makes it easier to navigate projects written by other people.
 
 ### Installation
 
@@ -73,6 +79,20 @@ You can configure the default HTTP host and port used by the development server 
 ```bash
 ng serve --host 0.0.0.0 --port 4504
 ```
+
+### Generating Components, Directives, Pipes and Services
+
+You can use the ng generate (or just ng g) command to generate Angular components:
+
+| **Scaffold**| **Usage** |
+| --- | --- |
+| Component | ng g component my-new-component |
+| Directive | ng g directive my-new-directive |
+| Pipe | ng g directive my-new-pipe |
+| Service | ng g directive my-new-service |
+| Class | ng g directive my-new-class |
+
+
 ### npm ERR!registry error parsing json- while trying to install npm in Windows
 ```bash
 npm cache clean
