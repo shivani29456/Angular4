@@ -25,6 +25,9 @@ Angular 4 is a full-fledged JavaScript framework for building web applications a
 * ANGULAR CLI
 * IDE (for writing code and to code quickly install `typescript` package.)
 
+### Angular CLI (Command Line Interface)- Introduction
+
+Angular provides an utility to allow users to create and manage projects from the command line. It automates tasks like creating projects, adding new controllers, etc. It’s generally a good idea to use angular-cli as it will help create and maintain common patterns across our application and use scaffolding for easier development workflows.
 
 ### Installation
 
@@ -39,6 +42,15 @@ This will help you to see the version installed in your system.If it does not pr
 ```bash
 npm install -g @angular/cli
 ```
+This installs angular-cli globally on your system.
+
+If you’ve already installed a former version of angular-cli you need to execute the following command sequence:
+```bash
+npm uninstall -g angular-cli
+npm cache clean
+npm install -g angular-cli@latest
+```
+![alt text](https://cli.angular.io/images/cli-logo.svg)
 
 ### Usage
 
@@ -49,8 +61,8 @@ ng help
 ### Generating and serving an Angular project via a development server
 
 ```bash
-ng new PROJECT-NAME
-cd PROJECT-NAME
+ng new my-dream-app
+cd my-dream-app
 ng serve  
 ```
 
