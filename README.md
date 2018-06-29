@@ -227,9 +227,131 @@ tr{
   - Set the tabel header and adjust its fontsize :- ``` doc.setFontSize(30);
     doc.text(460, 70, "Daily Contribution Report",'center'); ```
 
+
+## MultiChart ([ref])(http://krispo.github.io/angular-nvd3/)
+
+![alt text](http://krispo.github.io/angular-nvd3/img/multiChart.png)
+```bash
+{
+  "chart": {
+    "type": "multiChart",
+    "height": 450,
+    "margin": {
+      "top": 30,
+      "right": 60,
+      "bottom": 50,
+      "left": 70
+    },
+    "color": [
+      "#1f77b4",
+      "#ff7f0e",
+      "#2ca02c",
+      "#d62728",
+      "#9467bd",
+      "#8c564b",
+      "#e377c2",
+      "#7f7f7f",
+      "#bcbd22",
+      "#17becf"
+    ],
+    "duration": 500,
+    "xAxis": {
+      "dispatch": {},
+      "axisLabelDistance": 0,
+      "staggerLabels": false,
+      "rotateLabels": 0,
+      "rotateYLabel": true,
+      "showMaxMin": true,
+      "axisLabel": null,
+      "height": 60,
+      "ticks": null,
+      "width": 75,
+      "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "duration": 250,
+      "orient": "bottom",
+      "tickValues": null,
+      "tickSubdivide": 0,
+      "tickSize": 6,
+      "tickPadding": 5,
+      "domain": [
+        0,
+        1
+      ],
+      "range": [
+        0,
+        1
+      ]
+    },
+    "yAxis1": {
+      "dispatch": {},
+      "axisLabelDistance": 0,
+      "staggerLabels": false,
+      "rotateLabels": 0,
+      "rotateYLabel": true,
+      "showMaxMin": true,
+      "axisLabel": null,
+      "height": 60,
+      "ticks": null,
+      "width": 75,
+      "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "duration": 250,
+      "orient": "left",
+      "tickValues": null,
+      "tickSubdivide": 0,
+      "tickSize": 6,
+      "tickPadding": 3,
+      "domain": [
+        0,
+        1
+      ],
+      "range": [
+        0,
+        1
+      ]
+    },
+    "yAxis2": {
+      "dispatch": {},
+      "axisLabelDistance": 0,
+      "staggerLabels": false,
+      "rotateLabels": 0,
+      "rotateYLabel": true,
+      "showMaxMin": true,
+      "axisLabel": null,
+      "height": 60,
+      "ticks": null,
+      "width": 75,
+      "margin": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "duration": 250,
+      "orient": "right",
+      "tickValues": null,
+      "tickSubdivide": 0,
+      "tickSize": 6,
+      "tickPadding": 3,
+      "domain": [
+        0,
+        1
+      ],
+      "range": [
+        0,
+        1
+      ]
+    }
+```
 ## Documentation
 
 Docs can be found [here](https://angular.io/).
-## MultiChart
-
-![alt text](http://krispo.github.io/angular-nvd3/img/multiChart.png)
